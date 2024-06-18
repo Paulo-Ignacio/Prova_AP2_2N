@@ -77,6 +77,15 @@ def classifica_imc(imc):
 avaliados = []
 id = 0
 
+
+def obter_imc(dados):
+    return dados[2]
+
+
+def ordenar(lista):
+    return sorted(lista, key=obter_imc)
+
+
 while True:
     print("*********************************")
     print("*******CALCULADORA DE IMC********")
@@ -131,8 +140,11 @@ while True:
                 pass  # Criar Tarefa (2)
             
             elif sub_opc == 4:
-                pass  # Criar Tarefa (3)
-            
+                lista_ordenada = ordenar(avaliados)
+                for dados in lista_ordenada:
+                    print(f"ID:{dados[0]} O IMC de {dados[1]} é {dados[2]} e está classificado como: {dados[3]}")
+
+
             elif sub_opc == 5:
                 continue
     
