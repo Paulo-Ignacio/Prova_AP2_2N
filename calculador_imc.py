@@ -1,8 +1,8 @@
 def menu_salvar_carregar():
     while True:
-        print("*********************************")
-        print("**** SALVAR E CARREGAR DADOS ****")
-        print("*********************************")
+        print("***********")
+        print("** SALVAR E CARREGAR DADOS **")
+        print("***********")
         
         print("""MENU DE SALVAR E CARREGAR
         1 - Salvar Dados em um Arquivo
@@ -33,9 +33,9 @@ def menu_salvar_carregar():
 
 def menu_estatisticas():
     while True:
-        print("*********************************")
-        print("********* ESTATÍSTICAS **********")
-        print("*********************************")
+        print("***********")
+        print("*** ESTATÍSTICAS ****")
+        print("***********")
         
         print("""MENU DE ESTATÍSTICAS E ORDENAÇÃO
         1 - Exibir a Média de IMCs
@@ -78,9 +78,9 @@ avaliados = []
 id = 0
 
 while True:
-    print("*********************************")
-    print("*******CALCULADORA DE IMC********")
-    print("*********************************")
+    print("***********")
+    print("**CALCULADORA DE IMC***")
+    print("***********")
     
     print("""MENU
           1 - Calcular IMC
@@ -109,9 +109,9 @@ while True:
         if len(avaliados) == 0:
             print("Nenhum avaliado registrado.")
         else:
-            print("*********************************")
-            print("*******EXIBIÇÃO DE RESULTADOS*****")
-            print("*********************************")
+            print("***********")
+            print("**EXIBIÇÃO DE RESULTADOS**")
+            print("***********")
             print("""SUBMENU DE EXIBIÇÃO DE RESULTADOS:
                   1 - Imprimir Todos os Resultados
                   2 - Imprimir por ID
@@ -128,8 +128,11 @@ while True:
                 pass  # Criar Tarefa (1)
             
             elif sub_opc == 3:
-                pass  # Criar Tarefa (2)
-            
+               avaliados_ordem = sorted(avaliados, key=lambda x: x[1])
+               print("\nLista de avaliados ordenada por nome:")
+               for dados in avaliados_ordem:
+                    print(f"ID:{dados[0]} O IMC de {dados[1]} é {dados[2]} e está classificado como: {dados[3]}")
+                    
             elif sub_opc == 4:
                 pass  # Criar Tarefa (3)
             
@@ -146,9 +149,9 @@ while True:
         if len(avaliados) == 0:
             print("Nenhum avaliado registrado.")
         else:
-            print("*********************************")
-            print("*******SUBMENU DE ESTATÍSTICAS*****")
-            print("*********************************")
+            print("***********")
+            print("**SUBMENU DE ESTATÍSTICAS**")
+            print("***********")
             print("""SUBMENU DE ESTATÍSTICAS E ORDENAÇÃO:
                   1 - Exibir a Média de IMCs
                   2 - Exibir o Maior e Menor IMC
