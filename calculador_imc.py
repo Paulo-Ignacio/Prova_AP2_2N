@@ -1,3 +1,5 @@
+import math
+
 def menu_salvar_carregar():
     while True:
         print("*********************************")
@@ -157,8 +159,11 @@ while True:
             sub_opc = int(input("Escolha uma opção: "))
             
             if sub_opc == 1:
-                pass  # Criar Tarefa
-            
+               soma = 0
+               for dados in avaliados:
+                   soma += dados[2]
+                   media = soma / len(avaliados)
+               print(f"A média total de todos os IMC'S é {media}")
             elif sub_opc == 2:
                 pass  # Criar Tarefa
             
