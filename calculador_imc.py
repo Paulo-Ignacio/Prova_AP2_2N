@@ -146,27 +146,7 @@ while True:
         if len(avaliados) == 0:
             print("Nenhum avaliado registrado.")
         else:
-            print("*********************************")
-            print("*******SUBMENU DE ESTATÍSTICAS*****")
-            print("*********************************")
-            print("""SUBMENU DE ESTATÍSTICAS E ORDENAÇÃO:
-                  1 - Exibir a Média de IMCs
-                  2 - Exibir o Maior e Menor IMC
-                  3 - Exibir Contagem de Avaliados por IMC
-                  4 - Voltar ao Menu Principal""")
-            sub_opc = int(input("Escolha uma opção: "))
-            
-            if sub_opc == 1:
-                pass  # Criar Tarefa
-            
-            elif sub_opc == 2:
-                pass  # Criar Tarefa
-            
-            elif sub_opc == 3:
-                pass  # Criar Tarefa
-            
-            elif sub_opc == 4:
-                continue
+           menu_estatisticas()
     
     elif opc == 6:
         menu_salvar_carregar()
